@@ -22,7 +22,7 @@ class Open_File():
         self.file.close()
 
 
-with Open_File(r"\APdist1.csv","w") as f:
+with Open_File(r"\filename.csv","w") as f:
     f.write("s,d,d")
 
 
@@ -35,12 +35,12 @@ os.chdir(cwd)
 print(os.listdir())
 
 
-with Ctx_open (r"\APdist2.csv", "w") as d:
+with Ctx_open (r"\filename.csv", "w") as d:
      d.write("s,d,d")
 
 
 cwd = os.getcwd()
-os.chdir(r"C:\Users\86753")
+os.chdir(r"\dir")
 print(os.listdir())
 os.chdir(cwd)
 print(os.listdir())
@@ -54,7 +54,7 @@ def ch_dir(new_dir):
     finally:
         os.chdir(cwd1)
 
-with ch_dir(r"C:\Users\86753"):
+with ch_dir(r"\dir"):
     print(os.listdir())
 
 print(os.getcwd())
